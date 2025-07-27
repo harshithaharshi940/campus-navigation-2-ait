@@ -1,0 +1,112 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Landing page */
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.landing-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.college-name {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+.start-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #007bff;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Map page */
+.controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  display: flex;
+  gap: 5px;
+}
+#map {
+  position: relative;
+  width: 1000px;  /* Fixed width */
+  height: 700px;  /* Fixed height */
+  background: url('image/campus-map.png') no-repeat center/contain;
+  margin: auto;
+}
+
+/* Markers */
+.marker {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.marker.start { background: blue; }
+.marker.end { background: red; }
+
+/* Route line */
+.route-line {
+  position: absolute;
+  height: 2px;
+  background: yellow;
+  transform-origin: 0 0;
+}
+
+/* popup*/
+.popup {
+  position: absolute;
+  background: white;
+  border: 1px solid #333;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.info-icon {
+  color: #0c4818;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+#map {
+  position: relative;
+}
+
+.marker.start, .marker.end {
+  animation: pulse 1.5s infinite;
+}
+
+#hint {
+  position: absolute;
+  top: 7px;
+  left: 500px;
+  background: rgba(255,255,255,0.9);
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-size: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
